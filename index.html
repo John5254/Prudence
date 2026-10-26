@@ -1,0 +1,1718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PRUDENCE ENTERPRISE | Excellence in Every Service</title>
+
+    <meta name="description" content="Welcome to Prudence Enterprise. Explore our wine and drinks shop, car wash, barbing salon, and foreign exchange services.">
+
+    <meta name="theme-color" content="#0b0b0b">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --black: #0b0b0b;
+            --black-light: #141414;
+            --card: #181818;
+            --gold: #d4af62;
+            --gold-light: #f1d99b;
+            --white: #ffffff;
+            --muted: #b5b5b5;
+            --border: rgba(212, 175, 98, 0.25);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        button {
+            font: inherit;
+        }
+
+        .container {
+            width: min(1160px, 90%);
+            margin: auto;
+        }
+
+        /* ANNOUNCEMENT BAR */
+
+        .announcement {
+            background: var(--gold);
+            color: #111;
+            text-align: center;
+            padding: 8px 15px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        /* NAVIGATION */
+
+        header {
+            background: rgba(11, 11, 11, 0.96);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(14px);
+        }
+
+        .navbar {
+            min-height: 82px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-shrink: 0;
+        }
+
+        .brand-mark {
+            width: 46px;
+            height: 46px;
+            display: grid;
+            place-items: center;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            font-family: "Cormorant Garamond", serif;
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        .brand-name {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 23px;
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: 1px;
+        }
+
+        .brand-subtitle {
+            color: var(--gold);
+            font-size: 9px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-top: 5px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            color: #dedede;
+            font-size: 12px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-links .nav-contact {
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 10px 17px;
+        }
+
+        .nav-links .nav-contact:hover {
+            background: var(--gold);
+            color: #111;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: transparent;
+            color: var(--gold);
+            border: 1px solid var(--border);
+            padding: 8px 12px;
+            cursor: pointer;
+            font-size: 22px;
+        }
+
+        /* HERO SECTION */
+
+        .hero {
+            position: relative;
+            padding: 100px 0 90px;
+            overflow: hidden;
+            background:
+                radial-gradient(ellipse at 85% 20%, rgba(212,175,98,0.11), transparent 38%),
+                linear-gradient(135deg, #0b0b0b 0%, #111 60%, #17130b 100%);
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 1px;
+            height: 100%;
+            background: linear-gradient(transparent, var(--border), transparent);
+            opacity: 0.5;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            align-items: center;
+            gap: 65px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--gold);
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 35px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .hero h1 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(48px, 6.5vw, 79px);
+            line-height: 0.99;
+            font-weight: 600;
+            letter-spacing: -1px;
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: var(--gold);
+            font-style: italic;
+        }
+
+        .hero-description {
+            color: var(--muted);
+            max-width: 475px;
+            font-size: 14px;
+            line-height: 2;
+            margin-bottom: 34px;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-height: 49px;
+            padding: 13px 23px;
+            font-size: 12px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-gold {
+            background: var(--gold);
+            color: #111;
+            border: 1px solid var(--gold);
+        }
+
+        .btn-gold:hover {
+            background: var(--gold-light);
+            border-color: var(--gold-light);
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(255,255,255,0.25);
+            color: var(--white);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .hero-note {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 35px;
+            color: #999;
+            font-size: 11px;
+        }
+
+        .hero-note-line {
+            width: 40px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        /* HERO IMAGE COLLAGE */
+
+        .hero-visual {
+            position: relative;
+            min-height: 440px;
+        }
+
+        .hero-image-main {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 78%;
+            height: 390px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+        }
+
+        .hero-image-main img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.82);
+            transition: transform 0.7s ease;
+        }
+
+        .hero-image-main:hover img {
+            transform: scale(1.06);
+        }
+
+        .hero-image-small {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 47%;
+            height: 190px;
+            border: 5px solid var(--black);
+            overflow: hidden;
+            z-index: 2;
+        }
+
+        .hero-image-small img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-badge {
+            position: absolute;
+            right: -5px;
+            bottom: 20px;
+            z-index: 3;
+            background: var(--gold);
+            color: #111;
+            padding: 15px 18px;
+            text-align: center;
+            min-width: 120px;
+        }
+
+        .hero-badge strong {
+            display: block;
+            font-family: "Cormorant Garamond", serif;
+            font-size: 24px;
+            line-height: 1.2;
+        }
+
+        .hero-badge span {
+            display: block;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        /* SERVICE STRIP */
+
+        .service-strip {
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            background: #101010;
+        }
+
+        .strip-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .strip-item {
+            text-align: center;
+            padding: 23px 12px;
+            border-right: 1px solid var(--border);
+        }
+
+        .strip-item:last-child {
+            border-right: none;
+        }
+
+        .strip-number {
+            display: block;
+            color: var(--gold);
+            font-family: "Cormorant Garamond", serif;
+            font-size: 26px;
+            line-height: 1.2;
+        }
+
+        .strip-label {
+            display: block;
+            color: #b9b9b9;
+            font-size: 10px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-top: 5px;
+        }
+
+        /* GENERAL SECTIONS */
+
+        section {
+            scroll-margin-top: 90px;
+        }
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-heading {
+            max-width: 680px;
+            margin: 0 auto 50px;
+            text-align: center;
+        }
+
+        .section-heading .eyebrow {
+            justify-content: center;
+        }
+
+        .section-heading h2 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(38px, 5vw, 55px);
+            line-height: 1.1;
+            font-weight: 600;
+            margin-bottom: 17px;
+        }
+
+        .section-heading h2 span {
+            color: var(--gold);
+            font-style: italic;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.9;
+        }
+
+        /* SERVICES */
+
+        .services-section {
+            background: var(--black);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .service-card {
+            background: var(--card);
+            border: 1px solid rgba(255,255,255,0.07);
+            transition: border-color 0.35s, transform 0.35s, box-shadow 0.35s;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-7px);
+            box-shadow: 0 18px 45px rgba(0,0,0,0.3);
+        }
+
+        .service-image {
+            height: 290px;
+            position: relative;
+            overflow: hidden;
+            background: #222;
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.65s ease;
+        }
+
+        .service-card:hover .service-image img {
+            transform: scale(1.06);
+        }
+
+        .service-number {
+            position: absolute;
+            top: 17px;
+            left: 17px;
+            background: rgba(11,11,11,0.9);
+            color: var(--gold);
+            border: 1px solid var(--border);
+            padding: 7px 12px;
+            font-size: 10px;
+            letter-spacing: 1px;
+        }
+
+        .service-content {
+            padding: 27px 28px 30px;
+        }
+
+        .service-content h3 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 30px;
+            line-height: 1.2;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .service-content p {
+            color: var(--muted);
+            font-size: 12px;
+            line-height: 1.9;
+            margin-bottom: 23px;
+        }
+
+        .service-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-size: 10px;
+            font-weight: 700;
+        }
+
+        .service-link span {
+            transition: transform 0.3s;
+        }
+
+        .service-link:hover span {
+            transform: translateX(6px);
+        }
+
+        /* ABOUT */
+
+        .about-section {
+            background: #121212;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            align-items: center;
+            gap: 70px;
+        }
+
+        
+
+       
+
+        .about-copy .eyebrow {
+            margin-bottom: 18px;
+        }
+
+        .about-copy h2 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(38px, 4.5vw, 53px);
+            line-height: 1.08;
+            margin-bottom: 22px;
+        }
+
+        .about-copy h2 span {
+            color: var(--gold);
+            font-style: italic;
+        }
+
+        .about-copy > p {
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 2;
+            margin-bottom: 18px;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .feature {
+            border-left: 2px solid var(--gold);
+            padding-left: 14px;
+        }
+
+        .feature strong {
+            display: block;
+            font-size: 13px;
+            margin-bottom: 4px;
+        }
+
+        .feature span {
+            display: block;
+            color: var(--muted);
+            font-size: 11px;
+        }
+
+        /* CONTACT */
+
+        .contact-section {
+            background:
+                radial-gradient(ellipse at 50% 0%, rgba(212,175,98,0.08), transparent 55%),
+                var(--black);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            gap: 65px;
+        }
+
+        .contact-intro h2 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: clamp(40px, 5vw, 57px);
+            line-height: 1.05;
+            margin-bottom: 20px;
+        }
+
+        .contact-intro h2 span {
+            color: var(--gold);
+            font-style: italic;
+        }
+
+        .contact-intro > p {
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 2;
+            margin-bottom: 28px;
+        }
+
+        .contact-details {
+            display: grid;
+            gap: 21px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .contact-icon {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--border);
+            color: var(--gold);
+            display: grid;
+            place-items: center;
+            font-size: 16px;
+        }
+
+        .contact-item h4 {
+            font-size: 12px;
+            margin-bottom: 4px;
+        }
+
+        .contact-item p,
+        .contact-item a {
+            color: var(--muted);
+            font-size: 12px;
+            line-height: 1.8;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-item a:hover {
+            color: var(--gold);
+        }
+
+        .contact-panel {
+            background: #151515;
+            border: 1px solid var(--border);
+            padding: 36px;
+        }
+
+        .contact-panel h3 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 31px;
+            margin-bottom: 10px;
+        }
+
+        .contact-panel > p {
+            color: var(--muted);
+            font-size: 12px;
+            margin-bottom: 27px;
+        }
+
+        .contact-panel .btn {
+            width: 100%;
+            margin-bottom: 12px;
+        }
+
+        .contact-panel .btn:last-child {
+            margin-bottom: 0;
+        }
+
+        .director-info {
+            margin-top: 25px;
+            padding-top: 22px;
+            border-top: 1px solid var(--border);
+        }
+
+        .director-info span {
+            display: block;
+            color: var(--muted);
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 5px;
+        }
+
+        .director-info strong {
+            color: var(--gold);
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        /* RATINGS */
+
+        .rating-section {
+            background: #121212;
+            border-top: 1px solid var(--border);
+        }
+
+        .rating-box {
+            max-width: 600px;
+            margin: auto;
+            padding: 40px 25px;
+            text-align: center;
+            border: 1px solid var(--border);
+            background: #151515;
+        }
+
+        .rating-box h3 {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 32px;
+            margin-bottom: 7px;
+        }
+
+        .rating-box p {
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .stars {
+            display: flex;
+            justify-content: center;
+            gap: 9px;
+            margin: 20px 0;
+        }
+
+        .star {
+            border: none;
+            background: transparent;
+            color: #555;
+            font-size: 35px;
+            cursor: pointer;
+            transition: color 0.2s, transform 0.2s;
+        }
+
+        .star:hover,
+        .star.active {
+            color: var(--gold);
+            transform: scale(1.12);
+        }
+
+        #rating-message {
+            min-height: 24px;
+            color: var(--gold);
+            font-size: 12px;
+            margin-top: 8px;
+        }
+
+        .rating-note {
+            font-size: 10px !important;
+            margin-top: 10px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #080808;
+            border-top: 1px solid var(--border);
+            padding: 35px 0;
+        }
+
+        .footer-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .footer-brand {
+            font-family: "Cormorant Garamond", serif;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .footer-brand span {
+            color: var(--gold);
+        }
+
+        .footer-caption {
+            color: #888;
+            font-size: 10px;
+            margin-top: 4px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            font-size: 11px;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.08);
+            margin-top: 25px;
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+            color: #777;
+            font-size: 10px;
+        }
+
+        .footer-bottom strong {
+            color: var(--gold);
+            font-weight: 500;
+        }
+
+        /* WHATSAPP FLOAT BUTTON */
+
+        .whatsapp-float {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            width: 80px;
+            height: 80px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            background: #25d366;
+            color: #fff;
+            font-size: 25px;
+            font-weight: 700;
+            box-shadow: 0 5px 22px rgba(0,0,0,0.4);
+            z-index: 900;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-5px);
+        }
+
+        /* ANIMATION */
+
+        .reveal {
+            animation: appear 0.9s ease both;
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(18px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* RESPONSIVE DESIGN */
+
+        @media (max-width: 900px) {
+            .nav-links {
+                gap: 16px;
+            }
+
+            .nav-links a {
+                font-size: 11px;
+            }
+
+            .hero-grid {
+                gap: 35px;
+            }
+
+            .hero-visual {
+                min-height: 370px;
+            }
+
+            .hero-image-main {
+                height: 330px;
+            }
+
+            .hero-image-small {
+                height: 145px;
+            }
+
+            .about-grid,
+            .contact-grid {
+                gap: 40px;
+            }
+
+            .about-visual img {
+                height: 0;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .announcement {
+                font-size: 9px;
+                letter-spacing: 1.3px;
+            }
+
+            .navbar {
+                min-height: 72px;
+            }
+
+            .brand-mark {
+                width: 39px;
+                height: 39px;
+                font-size: 26px;
+            }
+
+            .brand-name {
+                font-size: 19px;
+            }
+
+            .brand-subtitle {
+                font-size: 8px;
+                letter-spacing: 1.2px;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                padding: 20px 5% 25px;
+                background: #101010;
+                border-bottom: 1px solid var(--border);
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 13px 0;
+                border-bottom: 1px solid rgba(255,255,255,0.06);
+                font-size: 13px;
+            }
+
+            .nav-links .nav-contact {
+                margin-top: 13px;
+                text-align: center;
+            }
+
+            .hero {
+                padding: 65px 0 60px;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero h1 {
+                font-size: clamp(48px, 13vw, 68px);
+            }
+
+            .hero-description {
+                font-size: 13px;
+            }
+
+            .hero-visual {
+                min-height: 350px;
+                max-width: 480px;
+                width: 100%;
+                margin: auto;
+            }
+
+            .hero-image-main {
+                width: 83%;
+                height: 310px;
+            }
+
+            .hero-image-small {
+                width: 47%;
+                height: 145px;
+            }
+
+            .hero-badge {
+                right: 0;
+                bottom: 15px;
+            }
+
+            .strip-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .strip-item:nth-child(2) {
+                border-right: none;
+            }
+
+            .strip-item:nth-child(-n+2) {
+                border-bottom: 1px solid var(--border);
+            }
+
+            .section {
+                padding: 70px 0;
+            }
+
+            .section-heading {
+                margin-bottom: 35px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .service-image {
+                height: 245px;
+            }
+
+            .service-content {
+                padding: 23px;
+            }
+
+            .service-content h3 {
+                font-size: 28px;
+            }
+
+            .about-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .about-visual {
+                max-width: 0px;
+            }
+
+            .about-visual img {
+                height: 0x;
+            }
+
+            .about-copy h2,
+            .contact-intro h2 {
+                font-size: 43px;
+            }
+
+            .contact-panel {
+                padding: 27px 22px;
+            }
+
+            .footer-main {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer-links {
+                gap: 15px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+            }
+
+            .whatsapp-float {
+                right: 15px;
+                bottom: 15px;
+                width: 60px;
+                height: 60px;
+                font-size: 18px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                animation-duration: 0.01ms !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        .tel{
+            color: white;
+        }
+               .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+            .heading {
+            background-color: black;
+            color: white;
+            border-radius: 20px;
+            padding: 20px;
+            margin-bottom: 20px;
+            font-family: 'Courier New', Courier, monospace;
+            animation-name: mydiv12;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
+            .about-business {
+            background: linear-gradient(135deg, #111111, #2b2b2b);
+            border: 2px solid #d2b48c;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 25px;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+        }
+        .w-icon{
+            border-radius: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="announcement" id="home">
+        Welcome to Prudence Enterprise &nbsp; | &nbsp; Excellence in Every Service
+    </div>
+
+    <!-- NAVIGATION -->
+    <header>
+        <div class="container navbar">
+
+            <a href="" class="brand" aria-label="Prudence Enterprise home">
+                <div class="brand-mark">P</div>
+
+                <div>
+                    <div class="brand-name">PRUDENCE</div>
+                    <div class="brand-subtitle">Enterprise</div>
+                </div>
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menu-toggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="nav-links">
+                ☰
+            </button>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="#home">Home</a>
+                <a href="#services">Our Services</a>
+                <a href="#about">About Us</a>
+                <a href="#contact">Contact</a>
+                <a href="#contact" class="nav-contact">Get in Touch ↗</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+          <div class="container">
+        <!-- Header -->
+        <div class="heading">
+            <h1>PRUDENCE ENTERPRISE</h1>
+        </div>
+
+        <!-- ABOUT THE BUSINESS SECTION (NEW & TUSH) -->
+        <div class="about-business">
+            <h3>WELCOME TO PRUDENCE ENTERPRISE</h3>
+            <p>
+                Prudence Enterprise is your premier multi-service destination committed to excellence and quality customer satisfaction. 
+                Whether you are looking to unwind with our exquisite selection of top-grade wines and drinks, give your vehicle a spotless professional wash, 
+                get a clean executive haircut at our barbing salon, or securely handle your foreign exchange (FX) needs, we deliver top-tier service all under one roof. 
+                Visit us today at our head office or click below to explore our specialized services!
+            </p>
+        </div>
+        <!-- SERVICE STRIP -->
+        <div class="service-strip">
+            <div class="container strip-grid">
+
+                <div class="strip-item">
+                    <span class="strip-number">01</span>
+                    <span class="strip-label">Wines & Drinks</span>
+                </div>
+
+                <div class="strip-item">
+                    <span class="strip-number">02</span>
+                    <span class="strip-label">Car Wash</span>
+                </div>
+
+                <div class="strip-item">
+                    <span class="strip-number">03</span>
+                    <span class="strip-label">Barbing Salon</span>
+                </div>
+
+                <div class="strip-item">
+                    <span class="strip-number">04</span>
+                    <span class="strip-label">Foreign Exchange</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- SERVICES SECTION -->
+        <section class="section services-section" id="services">
+            <div class="container">
+
+                <div class="section-heading">
+                    <div class="eyebrow">What We Do</div>
+
+                    <h2>
+                        Our Services,<br>
+                        <span>Our Commitment.</span>
+                    </h2>
+
+                    <p>
+                        Explore our range of services, each designed to meet
+                        different customer needs in one convenient destination.
+                        Select a service below to learn more.
+                    </p>
+                </div>
+
+                <div class="services-grid">
+
+                    <!-- WINE SHOP -->
+                    <article class="service-card">
+                        <div class="service-image">
+                            <img
+                                src="DOHE.png"
+                                alt="Prudence wines and drinks shop"
+                                loading="lazy">
+
+                            <span class="service-number">SERVICE 01</span>
+                        </div>
+
+                        <div class="service-content">
+                            <h3>Prudence Wines & Drinks</h3>
+
+                            <p>
+                                Explore our wines and drinks selection for
+                                celebrations, special occasions, gifting,
+                                and everyday enjoyment.
+                            </p>
+
+                            <a
+                                href="prudencewineshop.html"
+                                class="service-link">
+                                Explore Wine Shop <span>→</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- CAR WASH -->
+                    <article class="service-card">
+                        <div class="service-image">
+                            <img
+                                src="washing.jfif"
+                                alt="Prudence car wash service"
+                                loading="lazy">
+
+                            <span class="service-number">SERVICE 02</span>
+                        </div>
+
+                        <div class="service-content">
+                            <h3> Prudence Car Wash</h3> 
+
+                            <p>
+                                Give your vehicle the care it deserves.
+                                Visit our car wash service to keep your
+                                vehicle looking clean and presentable.
+                            </p>
+
+                            <a
+                                href="prudencecarwash.html"
+                                class="service-link">
+                                Explore Car Wash <span>→</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- BARBING SALON -->
+                    <article class="service-card">
+                        <div class="service-image">
+                            <img
+                                src="barb1.jfif"
+                                alt="Prudence barbing salon"
+                                loading="lazy">
+
+                            <span class="service-number">SERVICE 03</span>
+                        </div>
+
+                        <div class="service-content">
+                            <h3> Prudence Barbing Salon</h3>
+
+                            <p>
+                                Maintain your personal style with grooming
+                                services designed to help you look neat,
+                                confident, and well presented.
+                            </p>
+
+                            <a
+                                href="prudencebarbingsallon.html"
+                                class="service-link">
+                                Explore Salon <span>→</span>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- FOREIGN EXCHANGE -->
+                    <article class="service-card">
+                        <div class="service-image">
+                            <img
+                                src="dona 2.png"
+                                alt="Prudence foreign exchange service"
+                                loading="lazy">
+
+                            <span class="service-number">SERVICE 04</span>
+                        </div>
+
+                        <div class="service-content">
+                            <h3>Prudence Foreign Exchange</h3>
+
+                            <p>
+                                Contact us for information about our foreign
+                                exchange services, available currencies,
+                                rates, and transaction requirements.
+                            </p>
+
+                            <a
+                                href="prudenceforeignexchange.html"
+                                class="service-link">
+                                Explore FX Services <span>→</span>
+                            </a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section class="section about-section" id="about">
+            <div class="container about-grid">
+
+            
+
+                <div class="about-copy">
+
+                    <div class="eyebrow">About Our Business</div>
+
+                    <h2>
+                        More Than a Business.<br>
+                        <span>A Standard of Service.</span>
+                    </h2>
+
+                    <p>
+                        Prudence Enterprise brings together four different
+                        service areas under one business identity: wines and
+                        drinks, car wash, barbing salon, and foreign exchange.
+                    </p>
+
+                    <p>
+                        Our aim is to make it easier for customers to find
+                        the services they need while building lasting
+                        relationships through professional service and
+                        customer care.
+                    </p>
+
+                    <div class="about-features">
+
+                        <div class="feature">
+                            <strong>Customer Focus</strong>
+                            <span>Service built around customer needs.</span>
+                        </div>
+
+                        <div class="feature">
+                            <strong>Multiple Services</strong>
+                            <span>Four service areas in one business.</span>
+                        </div>
+
+                        <div class="feature">
+                            <strong>Convenience</strong>
+                            <span>Explore our services in one place.</span>
+                        </div>
+
+                        <div class="feature">
+                            <strong>Communication</strong>
+                            <span>Contact us directly for enquiries.</span>
+                        </div>
+
+                    </div>
+
+                    <a href="#contact" class="btn btn-gold">
+                        Speak With Us <span>↗</span>
+                    </a>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section class="section contact-section" id="contact">
+            <div class="container">
+
+                <div class="section-heading">
+                    <div class="eyebrow">Let's Connect</div>
+
+                    <h2>
+                        We'd Love to<br>
+                        <span>Hear From You.</span>
+                    </h2>
+
+                    <p>
+                        Have a question about any of our services?
+                        Reach out by phone, email, or WhatsApp.
+                    </p>
+                </div>
+
+                <div class="contact-grid">
+
+                    <div class="contact-intro">
+
+                        <h2>
+                            Get in<br>
+                            <span>Touch.</span>
+                        </h2>
+
+                        <p>
+                            Contact Prudence Enterprise for enquiries about
+                            our services, opening arrangements, and other
+                            business information.
+                        </p>
+
+                        <div class="contact-details">
+
+                            <div class="contact-item">
+                                <div class="contact-icon">⌖</div>
+
+                                <div>
+                                    <h4>Our Address</h4>
+                                    <p>
+                                        NO 71 APPLE AVENUE STREET<br>
+                                        OPPOSITE ST CHARLES CATHOLIC CHURCH
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">☎</div>
+
+                                <div>
+                                    <h4>Call Us</h4>
+
+                                    <p >
+                                        <a href="tel:+2348036029027">
+                                            08036029027
+                                        </a>
+                                        <br>
+
+                                        <a href="tel:+2348063779080" >
+                                            08063779080
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">✉</div>
+
+                                <div>
+                                    <h4>Email Address</h4>
+
+                                    <p>
+                                        <a href="mailto:johnchinedueze@gmail.com">
+                                            johnchinedueze@gmail.com
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contact-panel">
+
+                        <h3>How Can We Help?</h3>
+
+                        <p>
+                            Choose your preferred contact method below.
+                            We'll be happy to receive your enquiry.
+                        </p>
+
+                        <a
+                            class="btn btn-gold"
+                            href="https://wa.me/2348036029027?text=Hello%20Prudence%20Enterprise%2C%20I%20would%20like%20to%20make%20an%20enquiry."
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Chat With Us on WhatsApp ↗
+                        </a>
+
+                        <a
+                            class="btn btn-outline"
+                            href="tel:+2348036029027">
+                            Call Our Business
+                        </a>
+
+                        <a
+                            class="btn btn-outline"
+                            href="mailto:johnchinedueze@gmail.com">
+                            Send Us an Email
+                        </a>
+
+                        <div class="director-info">
+                            <span>Director</span>
+                            <strong>JOHN CHINEDU EZE</strong>
+                        </div>
+
+                       
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CUSTOMER RATING -->
+        <section class="section rating-section" id="rating">
+            <div class="container">
+
+                <div class="rating-box">
+
+                    <h3>Share Your Experience</h3>
+
+                    <p>
+                        How would you rate your experience with
+                        Prudence Enterprise?
+                    </p>
+
+                    <div class="stars" aria-label="Choose a rating from one to five stars">
+
+                        <button class="star" type="button" data-rating="1" aria-label="1 star">★</button>
+
+                        <button class="star" type="button" data-rating="2" aria-label="2 stars">★</button>
+
+                        <button class="star" type="button" data-rating="3" aria-label="3 stars">★</button>
+
+                        <button class="star" type="button" data-rating="4" aria-label="4 stars">★</button>
+
+                        <button class="star" type="button" data-rating="5" aria-label="5 stars">★</button>
+
+                    </div>
+
+                    <div id="rating-message" aria-live="polite"></div>
+
+                 
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+
+            <div class="footer-main">
+
+                <div>
+                    <div class="footer-brand">
+                        PRUDENCE <span>ENTERPRISE</span>
+                    </div>
+
+                    <div class="footer-caption">
+                        Excellence in Every Service.
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#services">Services</a>
+                    <a href="#about">About Us</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#rating">Rate Us</a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+
+                <p>
+                    &copy; <span id="year"></span> Prudence Enterprise.
+                    All rights reserved.
+                </p>
+
+                <p>
+                    Website by <strong>CHIDUBEM EZE (SON)</strong>
+                </p>
+
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a
+        href="https://wa.me/+2348036029027?text=Hello%20Prudence%20Enterprise"
+        class="whatsapp-float"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Contact Prudence Enterprise on WhatsApp">
+        <img src="w-icon.png" alt="whatsapp" class="w-icon">
+    </a>
+
+    <script>
+        // Automatically update the copyright year
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+
+        // Mobile navigation menu
+        const menuToggle = document.getElementById("menu-toggle");
+        const navLinks = document.getElementById("nav-links");
+
+        menuToggle.addEventListener("click", function () {
+            const isOpen = navLinks.classList.toggle("open");
+
+            menuToggle.setAttribute("aria-expanded", isOpen);
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen ? "Close navigation menu" : "Open navigation menu"
+            );
+
+            menuToggle.textContent = isOpen ? "✕" : "☰";
+        });
+
+        // Close the mobile menu after selecting a link
+        document.querySelectorAll("#nav-links a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                navLinks.classList.remove("open");
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuToggle.setAttribute("aria-label", "Open navigation menu");
+                menuToggle.textContent = "☰";
+            });
+        });
+
+
+        // Interactive star rating
+        // This is a visual demo only; it does not store ratings.
+        const stars = document.querySelectorAll(".star");
+        const ratingMessage = document.getElementById("rating-message");
+
+        stars.forEach(function (star) {
+            star.addEventListener("click", function () {
+                const rating = Number(this.dataset.rating);
+
+                stars.forEach(function (item) {
+                    const itemRating = Number(item.dataset.rating);
+
+                    item.classList.toggle("active", itemRating <= rating);
+                });
+
+                const messages = {
+                    1: "You selected 1 star. Thank you for your feedback.",
+                    2: "You selected 2 stars. Thank you for your feedback.",
+                    3: "You selected 3 stars. Thank you for your feedback.",
+                    4: "You selected 4 stars. Thank you for your feedback.",
+                    5: "You selected 5 stars. Thank you for your feedback."
+                };
+
+                ratingMessage.textContent = messages[rating];
+            });
+        });
+    </script>
+
+</body>
+</html>

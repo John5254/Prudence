@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prudence Exquisite Barbing Salon</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0b1329; /* Deep royal blue background */
+            color: #f8fafc;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #111e38; /* Rich dark navy card */
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+            border: 1px solid #1e3a8a;
+        }
+
+        .barbdiv {
+            background: linear-gradient(135deg, #0f172a, #1e293b);
+            color: white;
+            padding: 25px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 3px solid #d4af37; /* Elegant gold border */
+        }
+
+        .header-content {
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        /* Square Logo Styling */
+        .logo-container {
+            width: 50px;
+            height: 50px;
+            background: #0b1329;
+            border: 2px solid #d4af37;
+            border-radius: 8px; /* Slightly rounded square */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #d4af37; /* Gold letter P */
+            font-size: 1.6rem;
+            box-shadow: 0 4px 10px rgba(212, 175, 55, 0.2);
+            flex-shrink: 0;
+        }
+
+        .barbdiv h1 {
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+            color: #d4af37; /* Gold accent */
+        }
+
+        .barbdiv h2 {
+            font-size: 0.85rem;
+            font-weight: 300;
+            color: #cbd5e1;
+        }
+
+        .writing {
+            text-align: center;
+            padding: 25px;
+            background-color: #111e38;
+        }
+
+        .writing img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            margin-bottom: 20px;
+            border: 2px solid #d4af37;
+        }
+
+        .infobtn {
+            background-color: #d4af37; /* Rich Gold */
+            color: #0b1329;
+            border: none;
+            border-radius: 30px;
+            padding: 12px 28px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+
+        .infobtn:hover {
+            background-color: #e6c240;
+            transform: translateY(-2px);
+        }
+
+        .moreinfo {
+            padding: 0 25px;
+            text-align: center;
+        }
+
+        /* Table Styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            background: #0b1329;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #1e3a8a;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #1e3a8a;
+        }
+
+        th {
+            background-color: #d4af37;
+            color: #0b1329;
+            font-weight: 700;
+        }
+
+        tr:hover {
+            background-color: #111e38;
+        }
+
+        .barb {
+            background-color: #0b1329;
+            text-align: center;
+            padding: 30px 20px;
+            border-top: 1px solid #1e3a8a;
+        }
+
+        .address {
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            color: #d4af37;
+        }
+
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .barb button {
+            background-color: #111e38;
+            border: 1px solid #d4af37;
+            border-radius: 8px;
+            padding: 12px 20px;
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 380px;
+        }
+
+        .barb button:hover {
+            background-color: #d4af37;
+            transform: translateY(-2px);
+        }
+
+        .barb button:hover a {
+            color: #0b1329;
+        }
+
+        .barb a {
+            color: #f8fafc;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header Section with Gold 'P' Square Logo Top-Left -->
+        <div class="barbdiv">
+            <div class="logo-container">P</div>
+            <div class="header-content">
+                <h1>PRUDENCE EXQUISITE BARBING SALON</h1>
+                <h2>WE ALSO DEAL ON STYLING & BARBING OF HAIRCUTS</h2>
+            </div>
+        </div>
+        
+        <!-- Main Image & Price List Button -->
+        <div class="writing">
+            <div>
+                <img src="barb1.jfif" alt="Barbing Salon Interior" width="600" height="500">
+            </div>  
+            <button class="infobtn" onclick="toggleInformation()"><strong>CHECK PRICE LIST HERE &rarr;</strong></button>
+        </div>
+
+        <!-- Dynamic Price List Section -->
+        <div id="information" class="moreinfo"></div>
+
+        <!-- Footer / Address & Sister Pages -->
+        <div class="barb">
+            <div class="address">
+                <p>&#127968; <strong>ADDRESS:</strong> 71 OPPOSITE ST. CHARLES CATHOLIC CHURCH</p>
+            </div>
+            
+            <div class="links-container">
+                <button><a href="prudencecarwash.html">&rarr; CHECK OUT OUR CAR WASH PAGE</a></button>
+                <button><a href="prudencewineshop.html">&rarr; CHECK OUT OUR WINE SHOP PAGE</a></button>
+                <button><a href="prudenceforeignexchange.html">&rarr; CHECK OUT OUR FOREIGN EXCHANGE PAGE</a></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let isPriceVisible = false;
+
+        function toggleInformation() {
+            const moreinfo = document.getElementById("information");
+            
+            if (isPriceVisible) {
+                moreinfo.innerHTML = "";
+                moreinfo.style.padding = "0px";
+                isPriceVisible = false;
+            } else {
+                moreinfo.innerHTML = `
+                    <h3 style="margin-top: 20px; color: #d4af37;">PRICE LIST</h3>
+                    <table>
+                        <tr>
+                            <th>S/N</th>
+                            <th>DESCRIPTION</th>
+                            <th>AMOUNT (N)</th>
+                        </tr>
+                        <tr><td>1</td><td>ADULT BARBING</td><td>N1,500</td></tr>  
+                        <tr><td>2</td><td>TEENAGER BARBING</td><td>N1,000</td></tr>
+                        <tr><td>3</td><td>CHILDREN BARBING</td><td>N700</td></tr>
+                        <tr><td>4</td><td>CHILDREN BARBING & DYE</td><td>N2,500</td></tr>
+                        <tr><td>5</td><td>ADULT BARBING & DYE</td><td>N3,000</td></tr>
+                        <tr><td>6</td><td>ADULT BARBING & RELAXER</td><td>N3,000</td></tr>
+                        <tr><td>7</td><td>HAIR TINTING</td><td>N4,000</td></tr>
+                        <tr><td>8</td><td>WOMEN HAIRCUT</td><td>N2,000</td></tr>
+                    </table>
+                `;
+                moreinfo.style.padding = "25px";
+                isPriceVisible = true;
+            }
+        }
+    </script>
+   
+</body>
+</html>
